@@ -11,7 +11,7 @@ class PostList extends Component {
         id: 1,
         author: {
           name: 'Vanessa Romero',
-          avatar: 'https://i.pravatar.cc/150?img=1'
+          avatar: 'https://i.pravatar.cc/150?img=1',
         },
         date: '04 Jun 2019',
         content: 'Pessoal, alguém sabe se a Rocketseat está contratando?',

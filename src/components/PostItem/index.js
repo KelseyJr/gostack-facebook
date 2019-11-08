@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './style.css'
 
@@ -41,6 +42,24 @@ function PostItem({ author, date, content, comments }) {
       <PostComment comments={comments}/>
     </div>
   )
+}
+
+PostItem.propTypes = {
+  author: PropTypes.exact({
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+  }),
+  date: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  comments: PropTypes.arrayOf(PropTypes.exact({
+    id: PropTypes.number.isRequired,
+    author: PropTypes.exact({
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.string.isRequired,
+    }),
+    date: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+  }))
 }
 
 export default PostItem;
